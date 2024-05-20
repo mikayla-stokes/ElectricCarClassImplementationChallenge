@@ -25,6 +25,11 @@ chargeBattery(chargeTo) {
         this.charge = chargeTo;
         console.log(`Battery charged to: ${this.charge}%`);
     }
+accelerate() {
+        this.speed += 20;
+        this.charge -= 1;
+        console.log(`${this.make} going at ${this.speed} km/h with a charge of ${this.charge}%`);
+    }
 }
 
 //Example
