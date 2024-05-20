@@ -32,15 +32,16 @@ accelerate() {
     }
 }
 
-//Example
-Car1 = new Car('BMW', 120);
-Car2 = new Car('Mercedes', 95);
+// Create EV object using the provided test data
+const ev1 = new EV('Tesla', 120, 23);
 
-//Test data
-Car1.accelerate();
-Car1.brake();
-Car1.brake();
+// Experiment with calling the accelerate, brake, and chargeBattery methods
+ev1.accelerate();  // Tesla going at 140 km/h, with a charge of 22%
+ev1.accelerate();  // Tesla going at 160 km/h, with a charge of 21%
+ev1.accelerate();  // Tesla going at 180 km/h, with a charge of 20%
+ev1.accelerate();  // Tesla going at 200 km/h, with a charge of 19%
+ev1.accelerate();  // Tesla going at 220 km/h, with a charge of 18%
 
-Car2.accelerate();
-Car2.accelerate();
-Car2.brake();
+ev1.brake();       // New speed: 215 km/h
+ev1.chargeBattery(50);  // Battery charged to: 50%
+ev1.accelerate();  // Tesla going at 235 km/h, with a charge of 49%
